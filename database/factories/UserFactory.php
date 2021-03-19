@@ -2,7 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
+use App\Helpers\ArrHelper;
+use App\Helpers\CalHelper;
+use App\Models\User;
+use Carbon\Carbon;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -18,11 +21,28 @@ use Illuminate\Support\Str;
 */
 
 $factory->define(User::class, function (Faker $faker) {
+
+    $genders = ArrHelper::getList('genders');
+
+    $gender = $faker->randomElement($genders);
+    $name = $faker->name($gender);
+    $username = str_replace(" ", ".", strtolower($name));
+    $created_at = CalHelper::randomDate(
+        Carbon::now()->subYear(1)->toDateTimeString(),
+        Carbon::now()->startOfYear()->toDateTimeString(),
+    );
+
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
+        'uuid' => $faker->uuid,
+        'name' => $name,
+        'gender' => $gender,
+        'birth_date' => $faker->dateTimeBetween($startDate = '-50 years', $endDate = '-18 years', $timezone = null),
+        'username' => $username,
+        'email' => $username.'@example.com',
         'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'password' => bcrypt('password'),
+        'status' => 'activated',
         'remember_token' => Str::random(10),
+        'created_at' => $created_at
     ];
 });

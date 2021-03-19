@@ -1,55 +1,190 @@
-# Getting Started
+Connect
+Release Date    : 13 July 2020
+Author          : KodeMint
+Author Email    : kodemintservices@gmail.com
+Skype           : KodeMint
+Website         : https://kodemint.in
+Support         : http://support.kodemint.in
+Product Website : https://kodemint.in/connect
+Demo            : https://connect.kodemint.in
+--------------------------------------------
 
-These steps will get this sample Laravel application running for you using DigitalOcean App Platform.
+To read installation guidelines, please visit http://support.kodemint.in
 
-**Note: Following these steps may result in charges for the use of DigitalOcean services**
+Version 1.9.0 Released on 28 February 2021
 
-## Requirements
+* Publicly Accessible Meeting feature added
+* Publicly Accessible Meeting related configurations added
+* Whiteboard related configuration added
+* Mirror Video configuration added for horizontally flipping video streams
+* Live Meeting Layout options added for Mobile Screen
+* Meeting bottom bar buttons and menu options added & updated
+* Live Meeting page related styles improved
+* Whiteboard related issues fixed
+* User Contact issue fixed
 
-* You need a DigitalOcean account. If you don't already have one, you can sign up at https://cloud.digitalocean.com/registrations/new
-    
-## Deploying the App
+Version 1.8.0 Released on 4 February 2021
 
-Click this button to deploy the app to the DigitalOcean App Platform. If you are not logged in, you will be prompted to log in with your DigitalOcean account.
+* Whiteboard feature added
+* Whiteboard Streaming feature added
+* Recording issue resolved for Live Meeting
+* Live Video Indicator Demo & Audio Meter Components added for scheduled and live meetings
+* Meeting Snooze timezone issue fixed
+* Meeting Invitation timezone issue fixed
 
-[![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/digitalocean/sample-laravel/tree/main)
+Version 1.7.0 Released on 21 January 2021
 
-Using this button disable the "Auto deploy changes on push" feature as you are using this repo directly. If you wish to try that feature, you will need to make your own copy of this repository.
+* Speech Detection Highlight feature added
+* Feature added to allow user to join meeting without camera / mic
+* Configurations added to hide/show Link Sharing Button
+* Configurations related to Manifest Start URL and Scope added
+* App Logo component linking made optional
+* Webinar and Live Class related minor fixes
+* Toast Notification CSS related fixes
+* Profile image upload issue fixed
+* Login with OTP issue fixed
+* Locales and Permissions syncing issue fixed
+* Add to home screen - loop issue fixed
+* Custom CSS file added and integrated to be used
 
-To make a copy, click the Fork button above and follow the on-screen instructions. In this case, you'll be forking this repo as a starting point for your own app (see [GitHub documentation](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) to learn more about forking repos.
+Version 1.6.1 Released on 8 December 2020
 
-After forking the repo, you should now be viewing this README in your own github org (e.g. `https://github.com/<your-org>/sample-laravel`). To deploy the new repo, visit https://cloud.digitalocean.com/apps and click "Create App" or "Launch Your App". Then, select the repository you created and be sure to select the `main` branch.
+* All User Chat Room feature with auto syncing
+* Separate Chat Window feature
+* Chat members and search api improved
+* Configurations added to hide File Sharing and Group Chat feature on Chat Box
+* Quick Locale Switcher component added
+* Form Has Error alert added for better clarity
+* Meeting not ending bug fix
 
-After clicking the "Deploy to DigitalOcean" button or completing the instructions above to fork the repo, follow these steps:
+Version 1.6.0 Released on 23 November 2020
 
-1. Select which region you wish to deploy your app to and click Next. The closest region to you should be selected by default. All App Platform apps are routed through a global CDN so this will not affect your app performance, unless it needs to talk to external services.
-1. On the following screen, leave all the fields as they are and click Next.
-1. Confirm your Plan settings and how many containers you want to launch and click **Launch Basic/Pro App**.
-1. You should see a "Building..." progress indicator. And you can click "Deployments"→"Details" to see more details of the build.
-1. It can take a few minutes for the build to finish, but you can follow the progress by clicking the "Details" link in the top banner.
-1. Once the build completes successfully, click the "Live App" link in the header and you should see your running application in a new tab, displaying the home page.
+* Group Chat Feature
+* User's Private Contacts & Segments Feature
+* Configuration added to Mute Participants on Start
+* Option added to Unmute or Mute Participants on Live Meeting
+* Live Meeting Page Improved
+* Start Instant Meeting Page Improved
+* Service Worker version updated
+* Live Class bug fix
+* Sidebar UI Config - Unsplash API bug fix
 
-## Making Changes to Your App
+Version 1.5.0 Released on 29 October 2020
 
-If you followed the steps above to fork the repo and used your own copy when deploying the app, you can enjoy automatic deploys whenever changes are made to the repo. During these automatic deployments, your application will never pause or stop serving request because App Platform offers zero-downtime deployments.
+* Custom Meeting Code and Keep Meeting Alive features added for Instant Meetings
+* Meeting auto timeout issue fixed
+* Clear command added to AnyKeyToSearch component
+* Meeting related configurations added for debugging & support
+* Instant Meeting start page layout issue fixed
+* Product update page improved
+* Installation wizard and Server prerequisites check updated
 
-Here's an example code change you can make for this app:
+Version 1.4.0 Released on 14 October 2020
 
-1. Edit code within the repository
-1. Commit the change to the `main` branch. Normally it's a better practice to create a new branch for your change and then merge that branch to `main` after review, but for this demo you can commit to the `main` branch directly.
-1. Visit https://cloud.digitalocean.com/apps and navigate to your sample app.
-1. You should see a "Building..." progress indicator, just like when you first created the app.
-1. Once the build completes successfully, click the "Live App" link in the header and you should see your updated application running. You may need to force refresh the page in your browser (e.g. using Shift+Reload).
+* Input Device Selection on runtime improved on Live Meeting page
+* VAPID keys configuration added
+* Web Push notification feature integrated
+* PWA Manifest updated and caching improved
+* Meeting - pause and resume recording functions added
+* Meeting SDP Process related crashing issue fixed
+* Meeting recording issue fixed
+* Add to Home Screen Alert added with configuration
 
-## Learn More
+Version 1.3.0 Released on 29 September 2020
 
-You can learn more about the App Platform and how to manage and update your application at https://www.digitalocean.com/docs/app-platform/.
+* WebRTC File Sharing Component added
+* Insert Emoji on Chat added
+* Live Meeting page refactored
+* Meeting Global and Single Level Configuration options added
+* User Avatar and Dropdown added on Live Meeting Page
+* Input Device Selection option added on Live Meeting Page
+* Resolution, Bandwidth & Frame Rate Configuration for Live Meeting Page
+* Grid / Tile Layout improved for Live Meeting Page
+* Gallery Layout added on Live Meeting Page
+* Toast notification position style fixed
+* Online-Offline Notification system improved
+* Google Analytics event helper plugin added
+* Mute Sound Notification option added on Chat Configuration
+* Site redirect related fixes
+* User preference related fixes
 
-## Deleting the App
+Version 1.2.0 Released on 22 September 2020
 
-When you no longer need this sample application running live, you can delete it by following these steps:
-1. Visit the Apps control panel at https://cloud.digitalocean.com/apps
-1. Navigate to the sample app
-1. Choose "Settings"->"Destroy"
+* Chat Configuration added on Chat Component
+* Click to chat button on User Profile added
+* Mute Sound Notification option for Chat Added
+* Instant Meeting History added
+* Share URL module improved on Live Meeting Page
+* Segment description and editing issue fixed
+* Google Analytics module added
+* System added for Dynamic PWA Assets, App information and Site Manifest
+* Configuration for Terms / Policy acceptance on Registration added
+* Website Configuration added
+* Social Network Configuration added
+* Website Dynamic Pages Module added
+* Website Contact / Query Module added
+* Website Newsletter Subscriber Module added
+* New muted request utility added for XHR Request
+* Alert module added on Dashboard for showing alert
+* Transition for pages extracted to TransitionPage Component
+* Improved installation wizard
+* Restriction added for admin user deletion
+* Registration status issue fixed
+* Datatable API calling issue fixed
 
-**Note: If you don't delete your app, charges for the use of DigitalOcean services will continue to accrue.**
+Version 1.1.3 Released on 4 September 2020
+
+* Meetings related configurations added
+* Meetings - Block & Unblock invitee options added
+* Meetings - Block User from Live Meeting option added
+* Delete option added for cancelled and ended meetings
+* Instant meeting join issue fixed
+* Timezone related issues fixed
+* Locale related issues fixed
+* Chat related configurations added
+* User preference updated
+
+Version 1.1.2 Released on 22 August 2020
+
+* Meetings empty user column fixed
+* Meeting snooze notification fixed
+* Back navigation issue fixed on Instant Meeting
+* Meeting Filters issue fixed
+* Social login issue fixed
+* Timezone issue fixed
+* Login with OTP fixed
+* Two factor authentication fixed
+* Form Buttons Responsiveness fixed
+* Locale loading issue fixed
+* Change password issue fixed
+
+Version 1.1.1 Released on 16 August 2020
+
+* Locale loading issue fixed
+* Role assign issue fixed
+* Register page mobile responsiveness fixed
+* Product one click update issue fixed
+* Mailing Configuration From name issue fixed
+* Vuex store naming & versioning issue fix
+* Configurable Application Name and Window Title
+* Theme related issue fixed
+
+Version 1.1.0 Released on 8 August 2020
+
+* Live Chat Feature
+* Instant Meeting (Start and Join a Meeting)
+* Meeting Shareable Link Generation and Sharing
+* Meeting Live Page - Redesigned, new layout
+* Full screen and full window & tile layout
+* Configurable Signalling Server URL
+* Raise a Hand on Live Meeting Page
+* User privacy configuration improved
+* Assign role to user
+* Locale selection on Configuration
+* User Preference / Configuration
+* Language Preference for User
+* Ban, Activate, Approve Users
+
+Version 1.0.0 Released on 13 July 2020
+
+* Initial Release

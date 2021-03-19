@@ -2,8 +2,14 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Validation\UnauthorizedException;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -50,6 +56,24 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($exception instanceof FileNotFoundException) {
+            return response()->view('errors.file-not-found', compact('exception'), 404);
+        } else if ($exception instanceof AuthorizationException) {
+            return response()->json(['message' => __('user.permission_denied')], 403);
+        } else if ($exception instanceof UnauthorizedException) {
+            return response()->json(['message' => __('user.permission_denied')], 401);
+        } else if ($exception instanceof MethodNotAllowedHttpException) {
+            return response()->json(['message' => __('general.something_wrong')], 403);
+        } else if ($exception instanceof ModelNotFoundException) {
+            return response()->json(['message' => __('general.data_not_found')], 403);
+        } if ($exception instanceof ValidationException) {
+            return response()->json([
+                'message' => $exception->getMessage(),
+                'errors' => $exception->errors()
+            ], 422);
+        }
+
+
         return parent::render($request, $exception);
     }
 }

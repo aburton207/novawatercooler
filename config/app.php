@@ -40,6 +40,7 @@ return [
     */
 
     'debug' => (bool) env('APP_DEBUG', false),
+    'mode' => env('APP_MODE', 'live'),
 
     /*
     |--------------------------------------------------------------------------
@@ -171,9 +172,10 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        // App\Providers\TelescopeServiceProvider::class,
 
     ],
 
